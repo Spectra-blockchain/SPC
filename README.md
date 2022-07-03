@@ -13,5 +13,4 @@ Spectra Core integration/staging repository
 • Ports: 17000 (p2p) / 17001 (rpc)
 
 • Explorer http://explorer.spectrablockchain.com
-
 • Website [spectrablockchain.com](https://spectrablockchain.com)
