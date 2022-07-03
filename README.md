@@ -4,7 +4,7 @@ Spectra Core integration/staging repository
 ### Coin Specs
 
 • PoW Algorithm: Quark  
-• PoW Blocks: 1 - 1000 
+• PoW Blocks: 1 - 1000  
 • PoS Blocks: Starting from 1001  
 • Block Time: 60 Seconds    
 • Maturity: 100 Confirmations  
