@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=Spectra Core
+Comment=Spectra P2P Cryptocurrency
+Exec=spectra-qt %u
+Terminal=false
+Type=Application
+Icon=spectra128
+MimeType=x-scheme-handler/spectra;
+Categories=Office;Finance;
+StartupWMClass=Spectra-qt
+Name[en_US]=spectra-qt.desktop

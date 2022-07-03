@@ -1,0 +1,6 @@
+usr/local/bin/spectra-qt usr/bin
+share/pixmaps/spectra32.xpm usr/share/pixmaps
+share/pixmaps/spectra16.xpm usr/share/pixmaps
+share/pixmaps/spectra128.png usr/share/pixmaps
+debian/spectra-qt.desktop usr/share/applications
+debian/spectra-qt.protocol usr/share/kde4/services/

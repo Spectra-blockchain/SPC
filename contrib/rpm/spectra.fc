@@ -1,0 +1,8 @@
+/usr/bin/spectra-cli		--	gen_context(system_u:object_r:spectra_exec_t,s0)
+/usr/sbin/spectrad		--	gen_context(system_u:object_r:spectra_exec_t,s0)
+/usr/lib(64)?/spectra/spectrad		--	gen_context(system_u:object_r:spectra_exec_t,s0)
+
+/etc/spectra(/.*)?		gen_context(system_u:object_r:spectra_conf_t,s0)
+/var/lib/spectra(/.*)?		gen_context(system_u:object_r:spectra_var_lib_t,s0)
+
+(/var)?/run/spectrad(/.*)?   gen_context(system_u:object_r:spectra_var_run_t,s0)
