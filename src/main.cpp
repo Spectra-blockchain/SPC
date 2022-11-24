@@ -2011,28 +2011,22 @@ int64_t GetBlockValue(int nHeight)
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount, bool isZSPCStake)
 {
-    if (nHeight > 1)
+    if (nHeight >  500000)	 return 240 * COIN;
+    if (nHeight >  300000)	 return 210 * COIN;
+    if (nHeight >  200000)	 return 100 * COIN;
+    if (nHeight >  1)
         return GetBlockValue(nHeight) * 0.80;
-    if (nHeight > 200000)
-        return 100 * COIN;
-    if (nHeight > 300000)
-        return 210 * COIN;
-    if (nHeight > 500000)
-        return 240 * COIN;
 }
 
 int64_t GetDevPayment(int nHeight, int64_t blockValue)
 {
     int64_t nDevPayment = 0;
 
-    if (nHeight > 1)
+    if (nHeight >  500000)	 return 30 * COIN;
+    if (nHeight >  300000)	 return 10 * COIN;
+    if (nHeight >  200000)	 return 5 * COIN;
+    if (nHeight >  1)
         nDevPayment = GetBlockValue(nHeight) * 0.05;
-    if (nHeight > 200000)
-        nDevPayment = 5 * COIN;
-    if (nHeight > 300000)
-        nDevPayment = 10 * COIN;
-    if (nHeight > 500000)
-        nDevPayment = 30 * COIN;
 
     // sanity check, should never happen
     if (nDevPayment > blockValue)
