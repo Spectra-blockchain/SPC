@@ -2015,8 +2015,8 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     if (nHeight >  300000)	 return 210 * COIN;
     if (nHeight >  210000)	 return 100 * COIN; // transition from 70211 to 70212
     if (nHeight >  200000)	 return 120 * COIN;
-    if (nHeight >  1)
-        return GetBlockValue(nHeight) * 0.80;
+    
+    return GetBlockValue(nHeight) * 0.80;
 }
 
 int64_t GetDevPayment(int nHeight, int64_t blockValue)
