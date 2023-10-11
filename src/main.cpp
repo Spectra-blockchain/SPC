@@ -1999,6 +1999,7 @@ double ConvertBitsToDouble(unsigned int nBits)
 int64_t GetBlockValue(int nHeight)
 {
 
+    if (nHeight >  660000)	 return 0.1 * COIN;
     if (nHeight >  500000)	 return 400 * COIN;
     if (nHeight >  300000)	 return 300 * COIN;
     if (nHeight >  200000)	 return 150 * COIN;
@@ -2011,7 +2012,7 @@ int64_t GetBlockValue(int nHeight)
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount, bool isZSPCStake)
 {
-    if (nHeight >  500000)	 return 240 * COIN;
+    if (nHeight >  500000 && nHeight < 660001)	 return 240 * COIN;
     if (nHeight >  300000)	 return 210 * COIN;
     if (nHeight >  210000)	 return 100 * COIN; // transition from 70211 to 70212
     if (nHeight >  200000)	 return 120 * COIN;
@@ -2023,7 +2024,7 @@ int64_t GetDevPayment(int nHeight, int64_t blockValue)
 {
     int64_t nDevPayment = 0;
 
-    if (nHeight >  500000)	 return 30 * COIN;
+    if (nHeight >  500000 && nHeight < 660001)	 return 30 * COIN;
     if (nHeight >  300000)	 return 10 * COIN;
     if (nHeight >  200000)	 return 5 * COIN;
     if (nHeight >  1)
